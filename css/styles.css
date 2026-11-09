@@ -299,6 +299,12 @@ img.news__img { width: 100%; height: auto; aspect-ratio: 16 / 10; object-fit: co
   .gallery__item:last-child img { aspect-ratio: 4 / 3; }
 }
 
+.photo-fig { margin: 0; }
+.split__media .photo--square { aspect-ratio: 1 / 1; object-position: center 30%; }
+.photo-fig figcaption { margin-top: 12px; font-size: .88rem; color: var(--muted); font-style: italic; }
+.split__media:has(.photo-fig)::after { display: none; }
+.photo-fig img { border-bottom: 4px solid var(--yellow); }
+
 /* Reveal on scroll */
 .reveal { opacity: 0; transform: translateY(24px); transition: opacity .7s ease, transform .7s ease; }
 .reveal.is-visible { opacity: 1; transform: none; }
