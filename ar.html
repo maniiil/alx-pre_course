@@ -40,6 +40,7 @@
           <li><a href="ar-equipe.html">الفريق</a></li>
           <li><a href="#programmes">البرامج</a></li>
           <li><a href="#actualites">المستجدات</a></li>
+          <li><a href="#galerie">الصور</a></li>
           <li><a href="#publications">الموارد</a></li>
           <li><a class="btn btn--accent btn--sm" href="#contact">اتصل بنا</a></li>
         </ul>
@@ -59,11 +60,10 @@
             <a class="btn btn--ghost" href="#programmes">برامجنا</a>
           </div>
         </div>
-        <div class="hero__visual reveal" aria-hidden="true">
-          <div class="hero__card hero__card--1"><span class="dot"></span>مرصد التمويل الأصغر</div>
-          <div class="hero__card hero__card--2"><span class="dot dot--y"></span>التكوين والتعلم عن بعد</div>
-          <div class="hero__card hero__card--3"><span class="dot"></span>تسويق المنتجات</div>
-          <div class="hero__circle"></div>
+        <div class="hero__visual reveal">
+          <figure class="hero__photo"><img src="assets/photos/salon-inauguration.jpg" width="1024" height="682" alt="افتتاح معرض منتجات المقاولين الصغار"></figure>
+          <div class="hero__card hero__card--1" aria-hidden="true"><span class="dot dot--y"></span>معرض المقاولين الصغار</div>
+          <div class="hero__card hero__card--3" aria-hidden="true"><span class="dot"></span>ندوة حول التمويل الأصغر</div>
         </div>
       </div>
       <svg class="hero__wave" viewBox="0 0 1440 90" preserveAspectRatio="none" aria-hidden="true">
@@ -84,7 +84,7 @@
     <section class="section" id="centre">
       <div class="container split">
         <div class="split__media reveal">
-          <div class="photo-placeholder"><span>صورة مؤسساتية للمركز</span></div>
+          <img class="photo" src="assets/photos/salon-interview-map.jpg" width="1024" height="684" alt="حوار صحفي في المعرض أمام لافتة المركز" loading="lazy">
         </div>
         <div class="split__content reveal">
           <p class="eyebrow">المركز</p>
@@ -187,29 +187,45 @@
         </header>
         <div class="news">
           <article class="news__item reveal">
-            <div class="news__img photo-placeholder"><span>صورة</span></div>
+            <img class="news__img" src="assets/photos/seminaire-panel-1.jpg" alt="" loading="lazy">
             <div class="news__body">
-              <time datetime="2022-06">يونيو 2022</time>
+              <time>ندوة</time>
+              <h3><a href="#galerie">التحول المؤسساتي والرقمي لقطاع التمويل الأصغر</a></h3>
+              <p>جلستان: تشخيص الوضع والتحول المؤسساتي، ثم التحول الرقمي ونموذج تشغيلي جديد.</p>
+            </div>
+          </article>
+          <article class="news__item reveal">
+            <img class="news__img" src="assets/photos/salon-inauguration.jpg" alt="" loading="lazy">
+            <div class="news__body">
+              <time>معرض</time>
+              <h3><a href="#galerie">افتتاح معرض منتجات المقاولين الصغار</a></h3>
+              <p>افتتاح رسمي وزيارة أروقة العارضين الذين يواكبهم المركز.</p>
+            </div>
+          </article>
+          <article class="news__item reveal">
+            <img class="news__img" src="assets/photos/salon-visite-stands.jpg" alt="" loading="lazy">
+            <div class="news__body">
+              <time>يونيو 2022</time>
               <h3><a href="https://www.yabiladi.com/articles/details/137052/maroc-pour-financement-micro-projets-proximite.html" target="_blank" rel="noopener">3 ملايين درهم لتمويل 200 مشروع صغير للقرب</a></h3>
               <p>الدورة الثامنة لبرنامج الأنشطة المدرة للدخل تنتقي 200 مشروع يحملها 476 مستفيداً من سبع جمعيات للقروض الصغرى.</p>
             </div>
           </article>
-          <article class="news__item reveal">
-            <div class="news__img photo-placeholder"><span>صورة</span></div>
-            <div class="news__body">
-              <time datetime="2021-03-18">18 مارس 2021</time>
-              <h3><a href="https://ecoactu.ma/microfinance-solidaire-centre-mohammed-vi-jaida/" target="_blank" rel="noopener">اتفاقية شراكة مع جيدة</a></h3>
-              <p>المركز وجيدة يتعاونان لتشخيص المؤهلات السوسيو-اقتصادية للجهات الاثنتي عشرة.</p>
-            </div>
-          </article>
-          <article class="news__item reveal">
-            <div class="news__img photo-placeholder"><span>صورة</span></div>
-            <div class="news__body">
-              <time>التكوين عن بعد</time>
-              <h3><a href="https://finance-inclusive.ma/microfinance-le-centre-mohammed-vi-monte-en-puissance-dans-le-formation/" target="_blank" rel="noopener">المركز يعزز حضوره في التكوين عن بعد</a></h3>
-              <p>توسيع التكوين عن بعد ليشمل أعوان وزبناء جمعيات القروض الصغرى.</p>
-            </div>
-          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="galerie">
+      <div class="container">
+        <header class="section__head reveal">
+          <p class="eyebrow">بالصور</p>
+          <h2>المركز في الميدان</h2>
+        </header>
+        <div class="gallery">
+          <figure class="gallery__item gallery__item--wide reveal"><img src="assets/photos/salon-inauguration.jpg" alt="افتتاح المعرض"><figcaption>افتتاح المعرض</figcaption></figure>
+          <figure class="gallery__item reveal"><img src="assets/photos/seminaire-panel-1.jpg" alt="الندوة — الجلسة الأولى: تشخيص الوضع والتحول المؤسساتي"><figcaption>الندوة — الجلسة الأولى: تشخيص الوضع والتحول المؤسساتي</figcaption></figure>
+          <figure class="gallery__item reveal"><img src="assets/photos/salon-visite-stands.jpg" alt="زيارة أروقة المقاولين الصغار"><figcaption>زيارة أروقة المقاولين الصغار</figcaption></figure>
+          <figure class="gallery__item reveal"><img src="assets/photos/seminaire-panel-2.jpg" alt="الندوة — الجلسة الثانية: التحول الرقمي"><figcaption>الندوة — الجلسة الثانية: التحول الرقمي</figcaption></figure>
+          <figure class="gallery__item reveal"><img src="assets/photos/salon-interview-map.jpg" alt="حوار مع وكالة المغرب العربي للأنباء خلال المعرض"><figcaption>حوار مع وكالة المغرب العربي للأنباء خلال المعرض</figcaption></figure>
         </div>
       </div>
     </section>

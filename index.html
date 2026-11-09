@@ -41,6 +41,7 @@
           <li><a href="equipe.html">Équipe</a></li>
           <li><a href="#programmes">Programmes</a></li>
           <li><a href="#actualites">Actualités</a></li>
+          <li><a href="#galerie">Galerie</a></li>
           <li><a href="#publications">Ressources</a></li>
           <li><a class="btn btn--accent btn--sm" href="#contact">Nous contacter</a></li>
         </ul>
@@ -61,11 +62,10 @@
             <a class="btn btn--ghost" href="#programmes">Nos programmes</a>
           </div>
         </div>
-        <div class="hero__visual reveal" aria-hidden="true">
-          <div class="hero__card hero__card--1"><span class="dot"></span>Observatoire de la microfinance</div>
-          <div class="hero__card hero__card--2"><span class="dot dot--y"></span>Formation &amp; e-learning</div>
-          <div class="hero__card hero__card--3"><span class="dot"></span>Commercialisation des produits</div>
-          <div class="hero__circle"></div>
+        <div class="hero__visual reveal">
+          <figure class="hero__photo"><img src="assets/photos/salon-inauguration.jpg" width="1024" height="682" alt="Inauguration d'un salon des produits des micro-entrepreneurs"></figure>
+          <div class="hero__card hero__card--1" aria-hidden="true"><span class="dot dot--y"></span>Salon des micro-entrepreneurs</div>
+          <div class="hero__card hero__card--3" aria-hidden="true"><span class="dot"></span>Séminaire sur la microfinance</div>
         </div>
       </div>
       <svg class="hero__wave" viewBox="0 0 1440 90" preserveAspectRatio="none" aria-hidden="true">
@@ -88,7 +88,7 @@
     <section class="section" id="centre">
       <div class="container split">
         <div class="split__media reveal">
-          <div class="photo-placeholder"><span>Photo institutionnelle du Centre</span></div>
+          <img class="photo" src="assets/photos/salon-interview-map.jpg" width="1024" height="684" alt="Interview au salon, devant la bannière du Centre" loading="lazy">
         </div>
         <div class="split__content reveal">
           <p class="eyebrow">Le Centre</p>
@@ -194,29 +194,45 @@
         </header>
         <div class="news">
           <article class="news__item reveal">
-            <div class="news__img photo-placeholder"><span>Image</span></div>
+            <img class="news__img" src="assets/photos/seminaire-panel-1.jpg" alt="" loading="lazy">
             <div class="news__body">
-              <time datetime="2022-06">Juin 2022</time>
+              <time>Séminaire</time>
+              <h3><a href="#galerie">La transformation institutionnelle et digitale du secteur de la microfinance</a></h3>
+              <p>Deux panels : état des lieux et transformation institutionnelle, puis transformation digitale et nouveau modèle opérationnel.</p>
+            </div>
+          </article>
+          <article class="news__item reveal">
+            <img class="news__img" src="assets/photos/salon-inauguration.jpg" alt="" loading="lazy">
+            <div class="news__body">
+              <time>Salon</time>
+              <h3><a href="#galerie">Ouverture du salon des produits des micro-entrepreneurs</a></h3>
+              <p>Inauguration officielle et visite des stands des exposants accompagnés par le Centre.</p>
+            </div>
+          </article>
+          <article class="news__item reveal">
+            <img class="news__img" src="assets/photos/salon-visite-stands.jpg" alt="" loading="lazy">
+            <div class="news__body">
+              <time>Juin 2022</time>
               <h3><a href="https://www.yabiladi.com/articles/details/137052/maroc-pour-financement-micro-projets-proximite.html" target="_blank" rel="noopener">3 MDH pour 200 micro-projets de proximité</a></h3>
               <p>La 8<sup>e</sup> édition du programme AGR retient 200 micro-projets portés par 476 bénéficiaires issus de sept associations de microcrédit.</p>
             </div>
           </article>
-          <article class="news__item reveal">
-            <div class="news__img photo-placeholder"><span>Image</span></div>
-            <div class="news__body">
-              <time datetime="2021-03-18">18 mars 2021</time>
-              <h3><a href="https://ecoactu.ma/microfinance-solidaire-centre-mohammed-vi-jaida/" target="_blank" rel="noopener">Convention de partenariat avec Jaïda</a></h3>
-              <p>Le CMS et Jaïda s'associent pour diagnostiquer les potentiels socio-économiques des 12 régions.</p>
-            </div>
-          </article>
-          <article class="news__item reveal">
-            <div class="news__img photo-placeholder"><span>Image</span></div>
-            <div class="news__body">
-              <time>E-formation</time>
-              <h3><a href="https://finance-inclusive.ma/microfinance-le-centre-mohammed-vi-monte-en-puissance-dans-le-formation/" target="_blank" rel="noopener">Le Centre monte en puissance dans l'e-formation</a></h3>
-              <p>La formation à distance s'étend aux agents et aux clients des associations de microcrédit.</p>
-            </div>
-          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="galerie">
+      <div class="container">
+        <header class="section__head reveal">
+          <p class="eyebrow">En images</p>
+          <h2>Le Centre sur le terrain</h2>
+        </header>
+        <div class="gallery">
+          <figure class="gallery__item gallery__item--wide reveal"><img src="assets/photos/salon-inauguration.jpg" alt="Inauguration du salon"><figcaption>Inauguration du salon</figcaption></figure>
+          <figure class="gallery__item reveal"><img src="assets/photos/seminaire-panel-1.jpg" alt="Séminaire — Panel 1 : état des lieux et transformation institutionnelle"><figcaption>Séminaire — Panel 1 : état des lieux et transformation institutionnelle</figcaption></figure>
+          <figure class="gallery__item reveal"><img src="assets/photos/salon-visite-stands.jpg" alt="Visite des stands des micro-entrepreneurs"><figcaption>Visite des stands des micro-entrepreneurs</figcaption></figure>
+          <figure class="gallery__item reveal"><img src="assets/photos/seminaire-panel-2.jpg" alt="Séminaire — Panel 2 : transformation digitale"><figcaption>Séminaire — Panel 2 : transformation digitale</figcaption></figure>
+          <figure class="gallery__item reveal"><img src="assets/photos/salon-interview-map.jpg" alt="Interview accordée à la MAP pendant le salon"><figcaption>Interview accordée à la MAP pendant le salon</figcaption></figure>
         </div>
       </div>
     </section>
