@@ -179,6 +179,27 @@
       </div>
     </section>
 
+    <section class="section section--dark" id="regions">
+      <div class="container">
+        <header class="section__head reveal">
+          <p class="eyebrow">الحضور الجهوي</p>
+          <h2>جهات المملكة الاثنتا عشرة</h2>
+          <p>يواكب المركز المقاولين الصغار وجمعيات القروض الصغرى في جميع الجهات، التي يشملها بالخصوص التشخيص السوسيو-اقتصادي المنجز مع جيدة. اختر جهة لعرض التفاصيل.</p>
+        </header>
+        <div class="map">
+          <div class="map__canvas">
+            <div id="carte-maroc"></div>
+            <p class="map__legend"><span class="map__swatch"></span>جهة يغطيها المركز (12/12)</p>
+          </div>
+          <div class="map__side">
+            <div class="map__panel" id="carte-panel" aria-live="polite"></div>
+            <div class="map__list" id="carte-liste"></div>
+            <p class="map__src">الخريطة © المساهمون في OpenStreetMap (ODbL)</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
     <section class="section section--tint" id="actualites">
       <div class="container">
         <header class="section__head reveal">
@@ -318,5 +339,6 @@
   </footer>
 
   <script src="js/main.js" defer></script>
+  <script src="js/carte.js" defer></script>
 </body>
 </html>

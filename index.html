@@ -185,6 +185,27 @@
       </div>
     </section>
 
+    <section class="section section--dark" id="regions">
+      <div class="container">
+        <header class="section__head reveal">
+          <p class="eyebrow">Présence régionale</p>
+          <h2>Les 12 régions du Royaume</h2>
+          <p>Le CMS accompagne les micro-entrepreneurs et les associations de microcrédit dans toutes les régions, couvertes notamment par le diagnostic socio-économique mené avec Jaïda. Touchez une région pour voir le détail.</p>
+        </header>
+        <div class="map">
+          <div class="map__canvas">
+            <div id="carte-maroc"></div>
+            <p class="map__legend"><span class="map__swatch"></span>Région couverte par le CMS (12/12)</p>
+          </div>
+          <div class="map__side">
+            <div class="map__panel" id="carte-panel" aria-live="polite"></div>
+            <div class="map__list" id="carte-liste"></div>
+            <p class="map__src">Fond de carte © contributeurs OpenStreetMap (ODbL)</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
     <!-- ============ News ============ -->
     <section class="section section--tint" id="actualites">
       <div class="container">
@@ -330,5 +351,6 @@
   </footer>
 
   <script src="js/main.js" defer></script>
+  <script src="js/carte.js" defer></script>
 </body>
 </html>
