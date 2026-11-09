@@ -2,6 +2,17 @@
 (function () {
   "use strict";
 
+  const AR = document.documentElement.lang === "ar";
+  const T = AR ? {
+    open: "فتح القائمة", close: "إغلاق القائمة", locale: "ar-MA",
+    ok: "شكراً! تم استلام رسالتك.", err: "يرجى ملء الحقول المطلوبة بشكل صحيح.",
+    nlOk: "تم تسجيل اشتراكك.", nlErr: "البريد الإلكتروني غير صالح."
+  } : {
+    open: "Ouvrir le menu", close: "Fermer le menu", locale: "fr-FR",
+    ok: "Merci ! Votre message a bien été pris en compte.", err: "Merci de compléter correctement les champs requis.",
+    nlOk: "Inscription enregistrée.", nlErr: "Adresse e-mail invalide."
+  };
+
   const header = document.querySelector(".site-header");
   const toggle = document.querySelector(".nav__toggle");
   const menu = document.getElementById("nav-menu");
@@ -23,12 +34,12 @@
   const closeMenu = () => {
     menu.classList.remove("is-open");
     toggle.setAttribute("aria-expanded", "false");
-    toggle.setAttribute("aria-label", "Ouvrir le menu");
+    toggle.setAttribute("aria-label", T.open);
   };
   toggle.addEventListener("click", () => {
     const open = menu.classList.toggle("is-open");
     toggle.setAttribute("aria-expanded", String(open));
-    toggle.setAttribute("aria-label", open ? "Fermer le menu" : "Ouvrir le menu");
+    toggle.setAttribute("aria-label", open ? T.close : T.open);
   });
   menu.querySelectorAll("a").forEach((a) => a.addEventListener("click", closeMenu));
   document.addEventListener("keydown", (e) => { if (e.key === "Escape") closeMenu(); });
@@ -66,11 +77,11 @@
   const counters = document.querySelectorAll("[data-count]");
   const animate = (el) => {
     const target = parseInt(el.dataset.count, 10);
-    if (!target) return; // keep placeholder "—" until real figures are provided
+    if (!target) return;
     const suffix = el.dataset.suffix || "";
     const dur = 1600;
     const start = performance.now();
-    const fmt = new Intl.NumberFormat("fr-FR");
+    const fmt = new Intl.NumberFormat(T.locale, { numberingSystem: "latn" });
     const step = (now) => {
       const p = Math.min((now - start) / dur, 1);
       const eased = 1 - Math.pow(1 - p, 3);
@@ -121,9 +132,7 @@
         if (!valid) ok = false;
       });
       status.className = "form__status " + (ok ? "ok" : "err");
-      status.textContent = ok
-        ? "Merci ! Votre message a bien été pris en compte."
-        : "Merci de compléter correctement les champs requis.";
+      status.textContent = ok ? T.ok : T.err;
       if (ok) contact.reset();
     });
   }
@@ -136,7 +145,7 @@
       const status = document.querySelector(".newsletter__status");
       const ok = isEmail(input.value.trim());
       status.className = "newsletter__status " + (ok ? "ok" : "err");
-      status.textContent = ok ? "Inscription enregistrée." : "Adresse e-mail invalide.";
+      status.textContent = ok ? T.nlOk : T.nlErr;
       if (ok) nl.reset();
     });
   }
